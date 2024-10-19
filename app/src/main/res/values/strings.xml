@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">BusinessCardApp</string>
+    <string name="Nom">Diaby Aboubacar Sidik</string>
+    <string name="Fonction">Hacker éthique</string>
+    <string name="Mail">sinediaby@gmail.com</string>
+    <string name="Tel">(+225) 01 01 56 65 93</string>
+    <string name="Social">https://github.com/Abou-diaby</string>
+</resources>
