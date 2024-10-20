@@ -4,14 +4,13 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Email
 import androidx.compose.material.icons.filled.Phone
 import androidx.compose.material.icons.filled.Share
 import androidx.compose.material3.Icon
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -32,12 +31,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             BusinessCardAppTheme {
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
-                ) {
                     BusinessCard()
-                }
             }
         }
     }
@@ -48,6 +42,7 @@ fun BusinessCard() {
     Column(
         modifier = Modifier
             .fillMaxSize()
+            .background(Color(0xFFE0E0E0))
             .padding(8.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.SpaceBetween
@@ -83,7 +78,7 @@ fun BusinessCard() {
                 text = stringResource(R.string.Fonction),
                 fontSize = 20.sp,
                 fontWeight = FontWeight.Medium,
-                textAlign = TextAlign.Center,
+                textAlign = TextAlign.Center
             )
         }
 
@@ -147,7 +142,7 @@ fun Contact(icon: ImageVector, contactText: String) {
         ) {
             Text(
                 text = contactText,
-                fontSize = 16.sp,
+                fontSize = 16.sp
             )
         }
     }
